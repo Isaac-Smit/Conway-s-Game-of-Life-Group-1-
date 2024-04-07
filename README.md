@@ -23,6 +23,3 @@ SDV503 group 1 class assignment
  [[], [], [], [], [], [], [], [], [], []], 
  [[], [], [], [], [], [], [], [], [], []],
  [[], [], [], [], [], [], [], [], [], []],
-
- Index (1, 2)
- Find how we can see how many neighbouring cells are alive. 
