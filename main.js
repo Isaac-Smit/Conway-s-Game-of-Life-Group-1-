@@ -9,4 +9,10 @@ let grid =  [[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]],
 [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]],
 [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]]
 
-console.log(grid)
+grid.forEach(row => {
+    let rowString = '';
+    row.forEach(element => {
+      rowString += JSON.stringify(element);
+    });
+    console.log(rowString);
+  });
