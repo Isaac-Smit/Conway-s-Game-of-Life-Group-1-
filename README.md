@@ -11,6 +11,8 @@ SDV503 group 1 class assignment
  4. If a dead cell has exactly three live neighbours, it comes alive. 
 
  A cell (array place) is either populated or not populated
+     populated = 1
+ not populated = 0
  10 by 10 grid minimum
 
  [[], [], [], [], [], [], [], [], [], []], 
@@ -23,3 +25,10 @@ SDV503 group 1 class assignment
  [[], [], [], [], [], [], [], [], [], []], 
  [[], [], [], [], [], [], [], [], [], []],
  [[], [], [], [], [], [], [], [], [], []],
+
+ Readline: input places a "1" in desired place
+
+ Then applies the 4 rules
+
+ Find 8 neighbours
+
