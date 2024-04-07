@@ -1,3 +1,5 @@
+const readlineSync = require('readline-sync');
+
 let grid =  [[[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]], 
 [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]], 
 [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]], 
@@ -17,4 +19,3 @@ grid.forEach(row => {
     console.log(rowString);
   });
 
-  
