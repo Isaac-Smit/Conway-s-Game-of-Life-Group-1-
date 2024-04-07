@@ -16,3 +16,5 @@ grid.forEach(row => {
     });
     console.log(rowString);
   });
+
+  
