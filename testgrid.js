@@ -53,16 +53,16 @@ while (true) {
 //  if (yValue && xValue == false) {
 
 // name iteration 
-let iterationNumber = 
-  console.log(`Cycle ${iterationNumber}`);
-  printGrid();
-  }
+//let iterationNumber = 
+// console.log(`Cycle ${iterationNumber}`);
+//  printGrid();
+ // }
 //  else {
-    console.log("The world is going to end")
-// }
+    //console.log("The world is going to end")
+ }
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes')
 
 //}
 
-console.log("Thanks for using the program!")
+console.log("Thanks for using the program!");

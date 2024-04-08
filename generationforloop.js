@@ -34,3 +34,5 @@ function checkNeighbours (x, y){
     }
     return result;
 }
+
+console.log(checkCells)
