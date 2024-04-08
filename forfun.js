@@ -61,22 +61,19 @@ do {
 
 console.log("Thanks!");
 //WORKS FROM HERE 
+
 // You can now use userAnswerX and userAnswerY for further processing
 
 // userAnswerY -1 = index of array
 // userAnswerX -1 = index or array
 
 // let userAnswerY = 
-let yValue = userAnswerY+1; // Assuming userAnswerY is defined elsewhere
+let yValue = userAnswerY+1; // 
 // access the x value within the y array
 grid[yValue]
+
 let xValue = userAnswerX+1
+grid[yValue][xValue]
 
-// Assuming yValue is the index of the selected array in the grid
-/*let xValue = userAnswerX; // Assuming userAnswerX is defined elsewhere
-let selectedArray = grid[yValue]; // Select the array based on user's y-coordinate
-
-// Assuming xValue is the index of the element in the selected array
-let selectedElement = selectedArray[xValue]; // Select the element based on user's x-coordinate
-console.log (xValue)
-*/
+// take Y value
+// take X value
