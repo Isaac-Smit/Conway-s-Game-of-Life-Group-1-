@@ -1,3 +1,3 @@
 function checkforneighbour (){
-    if(grid.includes("1"))
+    for (let i = 0; i < grid.length; i++)
 }
