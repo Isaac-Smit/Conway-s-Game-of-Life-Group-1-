@@ -21,6 +21,9 @@ function printGrid() {
 
 printGrid();
 
+
+
+
 function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
 }
@@ -40,9 +43,12 @@ while (true) {
   let yValue = userAnswerY - 1;
 
   grid[yValue][xValue] = 1;
-// name iteration 
-  console.log("Cycle ${iteration}");
+
+  let cycleCount = 0;
+  cycleCount++;
+  console.log("Updated Grid:");
   printGrid();
+
 
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes') {
