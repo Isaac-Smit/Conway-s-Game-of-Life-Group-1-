@@ -68,6 +68,7 @@ grid[yValue]
 
 let xValue = userAnswerX+1
 grid[yValue][xValue]
+//swap 0 to 1
 console.log(grid)
 // take Y value
 // take X value
