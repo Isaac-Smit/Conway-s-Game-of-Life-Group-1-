@@ -1,7 +1,7 @@
 const readlineSync = require('readline-sync');
 
 let initialGrid = [];
-
+let cycleCount = 0
 
 
 function isInRange(value) {
@@ -45,24 +45,17 @@ while (true) {
   grid[yValue][xValue] = 1;
 
   console.log("Updated Grid:");
-  count()
+  cycleCount++;
+  console.log(`Count ${cycleCount}`)
   printGrid();
 
 //  if (yValue && xValue == false) {
 
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
-  if (continueResponse.toLowerCase() !== 'yes') {
+  if (continueResponse.toLowerCase() === 'no') {
     break;
   }
 }
-
-function count() {
-  let cycleCount = 0;
-  cycleCount++;
-  let iterationNumber = cycleCount;
-  console.log(`Cycle ${iterationNumber}`);
-}
-
 //  else {
     //console.log("The world is going to end")
 // }
