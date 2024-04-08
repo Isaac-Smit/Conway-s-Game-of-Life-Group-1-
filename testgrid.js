@@ -50,10 +50,20 @@ while (true) {
   printGrid();
 
 
+//  if (yValue && xValue == false) {
+
+// name iteration 
+let iterationNumber = 
+  console.log(`Cycle ${iterationNumber}`);
+  printGrid();
+  }
+//  else {
+    console.log("The world is going to end")
+// }
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes') {
     break;
   }
-}
+//}
 
 console.log("Thanks for using the program!")
