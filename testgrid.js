@@ -45,15 +45,16 @@ while (true) {
   grid[yValue][xValue] = 1;
 
   console.log("Updated Grid:");
-  count();
   printGrid();
 
 //  if (yValue && xValue == false) {
+
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes') {
     break;
   }
 }
+count()
 
 function count() {
   let cycleCount = 0;
@@ -61,6 +62,11 @@ function count() {
   let iterationNumber = cycleCount
   console.log(`Cycle ${iterationNumber}`);
 }
+
+// name iteration 
+  let iterationNumber = cycleCount
+  console.log(`Cycle ${iterationNumber}`);
+
 //  else {
     //console.log("The world is going to end")
 // }
@@ -68,4 +74,4 @@ function count() {
 
 //}
 
-console.log("Thanks for using the program!");
+console.log("Thanks for using the program!")
