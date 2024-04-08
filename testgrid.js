@@ -53,10 +53,11 @@ while (true) {
 //  if (yValue && xValue == false) {
 
 // name iteration 
-let iterationNumber = cycleCount
+
+  }
+  let iterationNumber = cycleCount
   console.log(`Cycle ${iterationNumber}`);
   printGrid();
-  }
 //  else {
     console.log("The world is going to end")
 // }
@@ -64,5 +65,5 @@ let iterationNumber = cycleCount
   if (continueResponse.toLowerCase() !== 'yes')
 
 //}
-
+console.log(continueResponse)
 console.log("Thanks for using the program!")
