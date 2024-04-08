@@ -44,24 +44,27 @@ while (true) {
 
   grid[yValue][xValue] = 1;
 
-  let cycleCount = 0;
-  cycleCount++;
   console.log("Updated Grid:");
+  count();
   printGrid();
-
 
 //  if (yValue && xValue == false) {
-
-// name iteration 
-let iterationNumber = cycleCount
-  console.log(`Cycle ${iterationNumber}`);
-  printGrid();
+  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
+  if (continueResponse.toLowerCase() !== 'yes') {
+    break;
   }
+}
+
+function count() {
+  let cycleCount = 0;
+  cycleCount++;
+  let iterationNumber = cycleCount
+  console.log(`Cycle ${iterationNumber}`);
+}
 //  else {
     //console.log("The world is going to end")
- }
-  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
-  if (continueResponse.toLowerCase() !== 'yes')
+// }
+  
 
 //}
 
