@@ -71,4 +71,4 @@ grid[yValue][xValue]
 //swap 0 to 1
 console.log(grid)
 // take Y value
-// take X value
+// take X value0
