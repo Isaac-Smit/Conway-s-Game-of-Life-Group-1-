@@ -52,7 +52,7 @@ while (true) {
 //  if (yValue && xValue == false) {
 
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
-  if (continueResponse.toLowerCase() === 'no') {
+  if (continueResponse.toLowerCase() !== 'yes') {
     break;
   }
 }
