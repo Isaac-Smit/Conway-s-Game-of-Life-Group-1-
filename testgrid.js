@@ -45,6 +45,7 @@ while (true) {
   grid[yValue][xValue] = 1;
 
   console.log("Updated Grid:");
+  count()
   printGrid();
 
 //  if (yValue && xValue == false) {
@@ -54,18 +55,13 @@ while (true) {
     break;
   }
 }
-count()
 
 function count() {
   let cycleCount = 0;
   cycleCount++;
-  let iterationNumber = cycleCount
+  let iterationNumber = cycleCount;
   console.log(`Cycle ${iterationNumber}`);
 }
-
-// name iteration 
-  let iterationNumber = cycleCount
-  console.log(`Cycle ${iterationNumber}`);
 
 //  else {
     //console.log("The world is going to end")
