@@ -70,6 +70,6 @@ console.log("Thanks!");
 // let userAnswerY = 
 let yValue = userAnswerY+1; // 
 // access the x value within the y array
-grid[yvalue]
+grid[yValue]
 let xValue = userAnswerX+1
 
