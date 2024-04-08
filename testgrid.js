@@ -59,11 +59,11 @@ while (true) {
   console.log(`Cycle ${iterationNumber}`);
   printGrid();
 //  else {
-    console.log("The world is going to end")
-// }
+    //console.log("The world is going to end")
+ }
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes')
 
 //}
-console.log(continueResponse)
+
 console.log("Thanks for using the program!")
