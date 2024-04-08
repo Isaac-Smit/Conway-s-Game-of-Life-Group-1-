@@ -53,15 +53,16 @@ while (true) {
 //  if (yValue && xValue == false) {
 
 // name iteration 
-let iterationNumber = cycleCount
-  console.log(`Cycle ${iterationNumber}`);
+
   }
+  let iterationNumber = cycleCount
+  console.log(`Cycle ${iterationNumber}`);
 //  else {
     //console.log("The world is going to end")
- //}
+ }
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes')
 
 //}
 
-console.log("Thanks for using the program!");
+console.log("Thanks for using the program!")
