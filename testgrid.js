@@ -19,8 +19,6 @@ function printGrid() {
   });
 }
 
-
-console.log(" ");
 printGrid();
 
 function isInRange(value) {
