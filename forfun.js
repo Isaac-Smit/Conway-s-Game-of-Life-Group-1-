@@ -68,11 +68,6 @@ grid[yValue]
 
 let xValue = userAnswerX+1
 grid[yValue][xValue]
-if (grid.contains("1")) {
-console.log(newGrid)
-} else {
-    console.log("tragic error")
-}
-
+console.log(grid)
 // take Y value
 // take X value
