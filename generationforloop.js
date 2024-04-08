@@ -25,8 +25,6 @@ function checkNeighbours (x, y){
             if(!(offsetX == 0 && offsetY == 0)) {
                 const resultX = (x + offsetX + x) % x;
                 const resultY = (y + offsetY + y) % y;
-                console.log(`X = (${x} + ${offsetX} + ${x}) % ${x} = ${resultX}`);
-                console.log(`Y = (${y} + ${offsetY} + ${y}) % ${y} = ${resultY}`);
 
                 result += grid[resultX][resultY]
             }
