@@ -53,7 +53,7 @@ while (true) {
 //  if (yValue && xValue == false) {
 
 // name iteration 
-let iterationNumber = 
+let iterationNumber = cycleCount
   console.log(`Cycle ${iterationNumber}`);
   printGrid();
   }
