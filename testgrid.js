@@ -3,7 +3,6 @@ const readlineSync = require('readline-sync');
 let initialGrid = [];
 let cycleCount = 0
 
-
 function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
 }
@@ -19,10 +18,18 @@ function printGrid() {
   });
 }
 
+function yesNo() {
+  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
+  if (continueResponse.toLowerCase() === 'no') {
+    return false;
+  } else if (continueResponse.toLowerCase() === 'yes') {
+    return true;
+  } else {
+    yesNo();
+  }
+}
+
 printGrid();
-
-
-
 
 function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
@@ -48,13 +55,10 @@ while (true) {
   cycleCount++;
   console.log(`Count ${cycleCount}`)
   printGrid();
+  yesNo();
 
 //  if (yValue && xValue == false) {
-
-  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
-  if (continueResponse.toLowerCase() !== 'yes') {
-    break;
-  }
+  
 }
 //  else {
     //console.log("The world is going to end")
