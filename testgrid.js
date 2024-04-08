@@ -1,5 +1,13 @@
 const readlineSync = require('readline-sync');
 
+let initialGrid = [];
+
+
+
+function isInRange(value) {
+  return typeof value === 'number' && value >= 1 && value <= 10;
+}
+
 let grid = [];
 for (let i = 0; i < 10; i++) {
   grid.push(new Array(10).fill(0));
@@ -32,8 +40,8 @@ while (true) {
   let yValue = userAnswerY - 1;
 
   grid[yValue][xValue] = 1;
-
-  console.log("Updated Grid:");
+// name iteration 
+  console.log("Cycle ${iteration}");
   printGrid();
 
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
