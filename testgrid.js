@@ -11,8 +11,6 @@ function printGrid() {
   });
 }
 
-
-console.log("Initial Grid:");
 printGrid();
 
 function isInRange(value) {
