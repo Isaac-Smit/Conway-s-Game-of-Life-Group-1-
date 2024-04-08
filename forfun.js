@@ -62,12 +62,6 @@ do {
 console.log("Thanks!");
 //WORKS FROM HERE 
 
-// You can now use userAnswerX and userAnswerY for further processing
-
-// userAnswerY -1 = index of array
-// userAnswerX -1 = index or array
-
-// let userAnswerY = 
 let yValue = userAnswerY+1; // 
 // access the x value within the y array
 grid[yValue]
