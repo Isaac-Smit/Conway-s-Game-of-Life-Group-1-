@@ -55,11 +55,10 @@ while (true) {
 // name iteration 
 let iterationNumber = cycleCount
   console.log(`Cycle ${iterationNumber}`);
-  printGrid();
   }
 //  else {
     //console.log("The world is going to end")
- }
+ //}
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() !== 'yes')
 
