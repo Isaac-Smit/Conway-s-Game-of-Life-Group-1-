@@ -73,6 +73,7 @@ let yValue = userAnswerY+1; //
 grid[yValue]
 
 let xValue = userAnswerX+1
+grid[yValue][xValue]
 
 // take Y value
 // take X value
