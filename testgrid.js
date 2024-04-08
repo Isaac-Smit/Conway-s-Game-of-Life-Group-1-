@@ -1,15 +1,7 @@
 const readlineSync = require('readline-sync');
 
 let initialGrid = [];
-for (let i = 0; i < 10; i++) {
-  initialGrid.push(new Array(10).fill(0));
-}
 
-function printGrid() {
-  grid.forEach(row => {
-    console.log(row.join(' '));
-  });
-}
 
 function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
