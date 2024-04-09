@@ -55,8 +55,8 @@ function printGrid() {
   });
 }
 
-function yesNo() {
-  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
+function yesNo(question) {
+  let continueResponse = readlineSync.question(`${question} (yes/no): `);
   if (continueResponse.toLowerCase() === 'no') {
     return false;
   } else if (continueResponse.toLowerCase() === 'yes') {
@@ -72,25 +72,36 @@ function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
 }
 
+
+function getuserInput (){
+let userInputting = true
+while (userInputting){
+let userAnswerX;
+do {
+  userAnswerX = parseFloat(readlineSync.question("Please input an x value from 1 to 10: "));
+} while (!isInRange(userAnswerX));
+
+let userAnswerY;
+do {
+  userAnswerY = parseFloat(readlineSync.question("Now your y value, again a value from 1 to 10: "));
+} while (!isInRange(userAnswerY));
+
+let xValue = userAnswerX - 1;
+let yValue = userAnswerY - 1;
+
+grid[yValue][xValue] = 1;
+printGrid()
+userInputting = yesNo("Do you want to coninue adding cells?")
+}}
+
+
+
 //NOTE - fixed while loop so it stops when you say no.
 printGrid();
-//NOTE - properly declared contorl variable for the while loop. "gameRunning" instead of "True" which = Infinite loop
+//NOTE - properly declared control variable for the while loop. "gameRunning" instead of "True" which = Infinite loop
 let gameRunning = true
 while (gameRunning) {
-  let userAnswerX;
-  do {
-    userAnswerX = parseFloat(readlineSync.question("Please input an x value from 1 to 10: "));
-  } while (!isInRange(userAnswerX));
-
-  let userAnswerY;
-  do {
-    userAnswerY = parseFloat(readlineSync.question("Now your y value, again a value from 1 to 10: "));
-  } while (!isInRange(userAnswerY));
-
-  let xValue = userAnswerX - 1;
-  let yValue = userAnswerY - 1;
-
-  grid[yValue][xValue] = 1;
+ if(yesNo("Do you want to add cells?")) getuserInput()
   checkCells()
 
 
@@ -98,7 +109,7 @@ while (gameRunning) {
   cycleCount++;
   console.log(`Count ${cycleCount}`)
   printGrid();
-  gameRunning =yesNo();
+  gameRunning =yesNo("Do you want to continue the simulation?");
 //NOTE -  here we reference gameRunning and have it "=" yesNo function
 
 
