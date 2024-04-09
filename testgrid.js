@@ -18,17 +18,6 @@ function printGrid() {
   });
 }
 
-function yesNo() {
-  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
-  if (continueResponse.toLowerCase() === 'no') {
-    return false;
-  } else if (continueResponse.toLowerCase() === 'yes') {
-    return true;
-  } else {
-    yesNo();
-  }
-}
-
 printGrid();
 
 function isInRange(value) {
@@ -55,11 +44,20 @@ while (true) {
   cycleCount++;
   console.log(`Count ${cycleCount}`)
   printGrid();
-  yesNo();
 
-//  if (yValue && xValue == false) {
-  
+  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ").toLowerCase();
+  while (continueResponse !== 'yes' && continueResponse !== 'no') {
+    let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ").toLowerCase();
+    if (continueResponse === 'no') {
+      break;
+    }
+  }
+
+  if (continueResponse === 'no') {
+    break;
+  }
 }
+
 //  else {
     //console.log("The world is going to end")
 // }
