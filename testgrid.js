@@ -24,7 +24,7 @@ function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
 }
 
-while (true) {
+outerLoop: while (true) {
   let userAnswerX;
   do {
     userAnswerX = parseFloat(readlineSync.question("Please input an x value from 1 to 10: "));
@@ -49,7 +49,7 @@ while (true) {
   while (continueResponse !== 'yes' && continueResponse !== 'no') {
     let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ").toLowerCase();
     if (continueResponse === 'no') {
-      break;
+      break outerLoop;
     }
   }
 
