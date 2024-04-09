@@ -50,17 +50,17 @@ while (true) {
   printGrid();
 
 //  if (yValue && xValue == false) {
-
+ function userYesNoContinue() {
   let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ");
   if (continueResponse.toLowerCase() === 'no') {
-    break;
+  }
+    if (continueResponse.toLowerCase() === yes) {
+      
+    }
+    else {
+      userYesNoContinue()
+    }
   }
 }
-//  else {
-    //console.log("The world is going to end")
-// }
-  
-
-//}
 
 console.log("Thanks for using the program!")
