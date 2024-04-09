@@ -111,17 +111,5 @@ while (gameRunning) {
   printGrid();
   gameRunning =yesNo("Do you want to continue the simulation?");
 //NOTE -  here we reference gameRunning and have it "=" yesNo function
-
-
-
-//  if (yValue && xValue == false) {
-  
 }
-//  else {
-    //console.log("The world is going to end")
-// }
-  
-
-//}
-
 console.log("Thanks for using the program!")
