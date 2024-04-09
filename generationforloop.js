@@ -1,9 +1,8 @@
-
 // iterating through x and y axis of the grid
 function checkCells (){
     for (let y = 0; y < grid.length; y++) {
         for (let x = 0; x < grid[y].length; x++) {
-            const neighbours = checkNeighbours (grid, x, y);
+            const neighbours = checkNeighbours ( x, y);
             if (grid[x][y] === 1) {
                 if (neighbours < 2 || neighbours > 3) {
                     grid[x][y] = 0;

@@ -12,6 +12,42 @@ for (let i = 0; i < 10; i++) {
   grid.push(new Array(10).fill(0));
 }
 
+// iterating through x and y axis of the grid
+function checkCells (){
+  for (let y = 0; y < grid.length; y++) {
+      for (let x = 0; x < grid[y].length; x++) {
+          const neighbours = checkNeighbours ( x, y);
+          //NOTE -  changed the paramaters checkNeighours function is taking to just (x, y)
+          if (grid[x][y] === 1) {
+              if (neighbours < 2 || neighbours > 3) {
+                  grid[x][y] = 0;
+              }
+          } else {
+              if (neighbours === 3) {
+                  grid[x][y] = 1;
+              }
+          }
+          }
+      }
+  }
+
+// checking the neighbours of cells with offset values
+function checkNeighbours (x, y){
+  let result = 0
+  for(let offsetX = -1; offsetX<=1; offsetX++) {
+      for(let offsetY = -1; offsetY<=1; offsetY++) {
+          if(!(offsetX == 0 && offsetY == 0)) {
+              const resultX = (x + offsetX + 10) % 10;
+              const resultY = (y + offsetY + 10) % 10;
+
+              result += grid[resultX][resultY]
+          }
+      } 
+  }
+  return result;
+}
+
+
 function printGrid() {
   grid.forEach(row => {
     console.log(row.join(' '));
@@ -35,9 +71,11 @@ function isInRange(value) {
   return typeof value === 'number' && value >= 1 && value <= 10;
 }
 
+//NOTE - fixed while loop so it stops when you say no.
 printGrid();
-
-while (true) {
+//NOTE - properly declared contorl variable for the while loop. "gameRunning" instead of "True" which = Infinite loop
+let gameRunning = true
+while (gameRunning) {
   let userAnswerX;
   do {
     userAnswerX = parseFloat(readlineSync.question("Please input an x value from 1 to 10: "));
@@ -52,12 +90,17 @@ while (true) {
   let yValue = userAnswerY - 1;
 
   grid[yValue][xValue] = 1;
-checkCells
+  checkCells()
+
+
   console.log("Updated Grid:");
   cycleCount++;
   console.log(`Count ${cycleCount}`)
   printGrid();
-  yesNo();
+  gameRunning =yesNo();
+//NOTE -  here we reference gameRunning and have it "=" yesNo function
+
+
 
 //  if (yValue && xValue == false) {
   
