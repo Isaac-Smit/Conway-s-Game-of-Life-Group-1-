@@ -37,6 +37,7 @@ function checkNeighbours (x, y){
   for(let offsetX = -1; offsetX<=1; offsetX++) {
       for(let offsetY = -1; offsetY<=1; offsetY++) {
           if(!(offsetX == 0 && offsetY == 0)) {
+// This math forces the values to loop around the edges of the grid. e.g. (9 + 1 + 10) % 10 = 20 % 10 = 0
               const resultX = (x + offsetX + 10) % 10;
               const resultY = (y + offsetY + 10) % 10;
 
