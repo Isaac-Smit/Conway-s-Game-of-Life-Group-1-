@@ -57,11 +57,20 @@ checkCells
   cycleCount++;
   console.log(`Count ${cycleCount}`)
   printGrid();
-  yesNo();
 
-//  if (yValue && xValue == false) {
-  
+  let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ").toLowerCase();
+  while (continueResponse !== 'yes' && continueResponse !== 'no') {
+    let continueResponse = readlineSync.question("Do you want to continue? (yes/no): ").toLowerCase();
+    if (continueResponse === 'no') {
+      break outerLoop;
+    }
+  }
+
+  if (continueResponse === 'no') {
+    break;
+  }
 }
+
 //  else {
     //console.log("The world is going to end")
 // }
